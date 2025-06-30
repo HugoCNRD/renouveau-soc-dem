@@ -49,35 +49,33 @@
 
     .section {
       padding: 50px 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
     .section h3 {
       font-size: 26px;
       color: #6c1313;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       text-align: center;
     }
 
-    .actualite-item {
-      background-color: #fff0f0;
-      border: 1px solid #6c1313;
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 25px;
-    }
-
-    .actualite-item h4 {
-      color: #6c1313;
-      margin-top: 0;
-      font-size: 20px;
-    }
-
-    .actualite-item p {
-      font-size: 17px;
+    .section p {
+      font-size: 18px;
       line-height: 1.6;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .image-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(108, 19, 19, 0.3);
     }
 
     footer {
@@ -97,6 +95,10 @@
       .section h3 {
         font-size: 22px;
       }
+
+      .section p {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -114,22 +116,13 @@
   <a href="adherer.html">Adhérer</a>
 </nav>
 
-<section class="section">
+<section class="section" id="actus">
   <h3>Actualités</h3>
+  <p>📢 Lancement officiel du programme 2025 — Consultez-le en ligne dès aujourd’hui.</p>
+  <p>🗳️ Prochain rendez-vous militant : le 20 juillet à Marseille.</p>
 
-  <div class="actualite-item">
-    <h4>📢 Lancement officiel du programme 2025 📢</h4>
-    <p>Découvrez dès aujourd’hui notre programme complet pour un avenir plus juste et durable. Nous vous invitons à le consulter en ligne.</p>
-  </div>
-
-  <div class="actualite-item">
-    <h4>🗳️ Prochain rendez-vous militant : 20 juillet à Marseille</h4>
-    <p>Rejoignez-nous pour débattre, échanger et préparer ensemble les prochaines étapes du mouvement.</p>
-  </div>
-
-  <div class="actualite-item">
-    <h4>🌍 Engagement écologique renforcé</h4>
-    <p>Nous intensifions nos actions pour la transition écologique avec un plan de 100 milliards d'euros, créant 500 000 emplois verts et sociaux.</p>
+  <div class="image-container">
+    <img src="communique.jpg" alt="Communiqué officiel RSD" />
   </div>
 </section>
 
