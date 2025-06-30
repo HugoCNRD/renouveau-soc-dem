@@ -3,23 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Renouveau Social Démocrate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
+      font-family: 'Glacial Indifference', sans-serif;
       background-color: #f4d3c8;
       color: #1a1a1a;
     }
+
     header {
       background-color: #6c1313;
       padding: 30px;
       text-align: center;
     }
+
+    header img {
+      width: 140px;
+    }
+
     header h1 {
       color: #f4d3c8;
       font-size: 32px;
-      margin: 0;
+      margin: 10px 0;
     }
+
     nav {
       background-color: #6c1313;
       display: flex;
@@ -27,55 +35,147 @@
       gap: 25px;
       padding: 15px 0;
     }
+
     nav a {
       color: #f4d3c8;
       text-decoration: none;
       font-weight: bold;
+      font-size: 15px;
     }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
     }
-    section h2 {
+
+    .hero h2 {
+      font-size: 28px;
       color: #6c1313;
-      font-size: 26px;
     }
-    section p {
+
+    .hero p {
       font-size: 18px;
+      margin: 15px 0;
     }
+
+    .hero span {
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section h3 {
+      font-size: 26px;
+      color: #6c1313;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .section span {
+      font-weight: bold;
+    }
+
     footer {
       background-color: #6c1313;
       color: #f4d3c8;
       text-align: center;
       padding: 20px;
-      margin-top: 50px;
+      margin-top: 60px;
+    }
+
+    .cta {
+      background-color: #6c1313;
+      color: #f4d3c8;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .cta h4 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .cta a {
+      background-color: #f4d3c8;
+      color: #6c1313;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .hero h2 {
+        font-size: 24px;
+      }
+
+      .section h3 {
+        font-size: 22px;
+      }
     }
   </style>
 </head>
+
 <body>
+
 <header>
+  <img src="logo_rds.png" alt="Logo RSD"> <!-- Remplace 'logo_rds.png' par ton fichier logo -->
   <h1>Renouveau Social Démocrate</h1>
 </header>
+
 <nav>
-  <a href="#valeurs">Valeurs</a>
+  <a href="#valeurs">Nos Valeurs</a>
   <a href="#programme">Programme</a>
-  <a href="#contact">Contact</a>
+  <a href="#actus">Actualités</a>
+  <a href="#contact">Adhérer</a>
 </nav>
-<section>
-  <h2 id="valeurs">Nos valeurs</h2>
-  <p>Une gauche humaniste, écologiste et sociale pour réconcilier progrès et justice sociale.</p>
+
+<section class="hero">
+  <h2>Ensemble pour un meilleur avenir</h2>
+  <p><span>Il est temps de réconcilier progrès et justice sociale, liberté et responsabilité collective.</span></p>
 </section>
-<section>
-  <h2 id="programme">Notre programme</h2>
-  <p>100 milliards pour la transition, retraite à 63 ans, SMIC à 1700€, lutte contre l’évasion fiscale.</p>
+
+<section class="section" id="valeurs">
+  <h3>Nos valeurs</h3>
+  <p>Le Renouveau Social Démocrate porte l’ambition d’une société fondée sur l’égalité réelle, la dignité, la solidarité et le respect du vivant. <span>La richesse d’une nation ne se mesure pas à ses comptes, mais à l’avenir qu’elle construit.</span></p>
+  <p>Notre engagement écologiste, féministe et humaniste est total : <span>aucun être humain n'est illégal, aucun territoire ne doit être abandonné, aucun citoyen laissé sans voix.</span></p>
 </section>
-<section>
-  <h2 id="contact">Contact et adhésion</h2>
-  <p>Rejoignez le mouvement et portons ensemble ce projet pour la France.</p>
+
+<section class="section" id="programme">
+  <h3>Notre programme</h3>
+  <p><span>100 milliards pour la transition écologique</span>, 500 000 emplois verts et sociaux, retraite digne à 63 ans, fiscalité plus juste, santé et éducation gratuites et universelles.</p>
+  <p>Nous voulons une France forte de ses territoires, de sa culture et de son engagement international solidaire. <span>Détruire la nature, c’est scier la branche sur laquelle repose l’humanité.</span></p>
 </section>
+
+<section class="section" id="actus">
+  <h3>Actualités</h3>
+  <p>📢 Lancement officiel du programme 2025 — Consultez-le en ligne dès aujourd’hui.</p>
+  <p>🗳️ Prochain rendez-vous militant : le 20 juillet à Marseille.</p>
+</section>
+
+<section class="cta" id="contact">
+  <h4>Rejoignez le mouvement</h4>
+  <a href="#">Adhérez maintenant</a>
+</section>
+
 <footer>
-  <p>&copy; 2025 Renouveau Social Démocrate</p>
+  <p>&copy; 2025 Renouveau Social Démocrate — Ensemble pour un meilleur avenir</p>
 </footer>
+
 </body>
 </html>
