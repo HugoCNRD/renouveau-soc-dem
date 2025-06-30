@@ -49,7 +49,7 @@
 
     .section {
       padding: 50px 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
@@ -60,15 +60,17 @@
       text-align: center;
     }
 
-    .section p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 20px;
+    .pdf-container {
+      text-align: center;
+      margin: 30px 0;
     }
 
-    .highlight {
-      font-weight: bold;
-      color: #6c1313;
+    .pdf-container iframe {
+      width: 100%;
+      height: 800px;
+      border: none;
+      box-shadow: 0 0 12px rgba(108, 19, 19, 0.3);
+      border-radius: 8px;
     }
 
     footer {
@@ -89,8 +91,8 @@
         font-size: 22px;
       }
 
-      .section p {
-        font-size: 16px;
+      .pdf-container iframe {
+        height: 500px;
       }
     }
   </style>
@@ -98,7 +100,7 @@
 <body>
 
 <header>
-  <img src="RSD.jpg" alt="Logo RSD" />
+  <img src="logo_rds.png" alt="Logo RSD" />
   <h1>Renouveau Social Démocrate</h1>
 </header>
 
@@ -109,14 +111,14 @@
   <a href="adherer.html">Adhérer</a>
 </nav>
 
-<section class="section" id="programme">
-  <h3>Notre programme</h3>
-  <p><span class="highlight">100 milliards pour la transition écologique</span> : un investissement massif pour protéger notre planète et créer <span class="highlight">500 000 emplois verts et sociaux</span>.</p>
-  <p>Une <span class="highlight">retraite digne à 63 ans</span>, avec un système plus juste et solidaire, qui garantit la dignité de chaque citoyen.</p>
-  <p><span class="highlight">Fiscalité plus juste</span>, où chacun contribue selon ses moyens, pour financer des services publics de qualité.</p>
-  <p><span class="highlight">Santé et éducation gratuites et universelles</span>, parce que l'accès à ces droits fondamentaux est la base d'une société égalitaire.</p>
-  <p>Nous voulons une France forte de ses territoires, riche de sa culture, engagée internationalement dans la solidarité.</p>
-  <p><span class="highlight">Détruire la nature, c’est scier la branche sur laquelle repose l’humanité.</span> Notre engagement écologique est au cœur de chaque action.</p>
+<section class="section">
+  <h3>Consultez notre programme complet</h3>
+
+  <div class="pdf-container">
+    <iframe src="programme.pdf"></iframe>
+  </div>
+
+  <p style="text-align: center; font-size: 16px;">📄 Si le document ne s'affiche pas, <a href="programme.pdf" target="_blank" style="color: #6c1313; font-weight: bold;">cliquez ici pour l'ouvrir dans un nouvel onglet</a>.</p>
 </section>
 
 <footer>
