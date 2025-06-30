@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adhérer - Renouveau Social Démocrate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Glacial Indifference', sans-serif;
+      background-color: #f4d3c8;
+      color: #1a1a1a;
+    }
+
+    header {
+      background-color: #6c1313;
+      padding: 30px;
+      text-align: center;
+    }
+
+    header img {
+      width: 140px;
+    }
+
+    header h1 {
+      color: #f4d3c8;
+      font-size: 32px;
+      margin: 10px 0;
+    }
+
+    nav {
+      background-color: #6c1313;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #f4d3c8;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+    .section {
+      padding: 50px 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .section h3 {
+      font-size: 26px;
+      color: #6c1313;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 16px;
+      color: #6c1313;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 10px;
+      font-size: 15px;
+      border: 2px solid #6c1313;
+      border-radius: 5px;
+      font-family: 'Glacial Indifference', sans-serif;
+      resize: vertical;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    button {
+      background-color: #6c1313;
+      color: #f4d3c8;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #8a1b1b;
+    }
+
+    footer {
+      background-color: #6c1313;
+      color: #f4d3c8;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .section h3 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo_rds.png" alt="Logo RSD" />
+  <h1>Renouveau Social Démocrate</h1>
+</header>
+
+<nav>
+  <a href="index.html">Nos Valeurs</a>
+  <a href="programme.html">Programme</a>
+  <a href="actualite.html">Actualités</a>
+  <a href="adherer.html" class="active">Adhérer</a>
+</nav>
+
+<section class="section">
+  <h3>Formulaire d'adhésion</h3>
+  <form action="hugobatigne@gmail.com" method="POST" enctype="text/plain" >
+    <label for="nom">Nom complet *</label>
+    <input type="text" id="nom" name="Nom" required />
+
+    <label for="email">Adresse email *</label>
+    <input type="email" id="email" name="Email" required />
+
+    <label for="telephone">Téléphone</label>
+    <input type="text" id="telephone" name="Téléphone" />
+
+    <label for="message">Message / Commentaires</label>
+    <textarea id="message" name="Message" placeholder="Vos motivations, questions..." ></textarea>
+
+    <button type="submit">Envoyer ma demande</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 Renouveau Social Démocrate — Ensemble pour un meilleur avenir</p>
+</footer>
+
+</body>
+</html>
 
