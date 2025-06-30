@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <title>Actualités - Renouveau Social Démocrate</title>
-  <link href="GlacialIndifference-Regular.otf" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      font-family: 'GlacialIndifference-Regular.otf', sans-serif;
+      font-family: 'Glacial Indifference', sans-serif;
       background-color: #f4d3c8;
       color: #1a1a1a;
     }
@@ -56,26 +56,38 @@
     .section h3 {
       font-size: 26px;
       color: #6c1313;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       text-align: center;
     }
 
-    .section p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 20px;
+    .card {
+      background-color: #ffffff;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(108, 19, 19, 0.15);
     }
 
-    .image-container {
+    .card p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .card strong {
+      color: #6c1313;
+    }
+
+    .communique {
       text-align: center;
       margin: 40px 0;
     }
 
-    .image-container img {
+    .communique img {
       max-width: 100%;
       height: auto;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(108, 19, 19, 0.3);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(108, 19, 19, 0.2);
     }
 
     footer {
@@ -96,7 +108,7 @@
         font-size: 22px;
       }
 
-      .section p {
+      .card p {
         font-size: 16px;
       }
     }
@@ -105,25 +117,36 @@
 <body>
 
 <header>
-  <img src="RSD.jpg" alt="Logo RSD" />
+  <img src="logo_rds.png" alt="Logo RSD" />
   <h1>Renouveau Social Démocrate</h1>
 </header>
 
 <nav>
-  <a href="index.html">Accueil</a>
+  <a href="index.html">Nos Valeurs</a>
   <a href="programme.html">Programme</a>
   <a href="actualite.html" class="active">Actualités</a>
   <a href="adherer.html">Adhérer</a>
 </nav>
 
-<section class="section" id="actus">
+<section class="section">
   <h3>Actualités</h3>
-  <p>📢 Lancement officiel du programme 2025 — Consultez-le en ligne dès aujourd’hui.</p>
-  <p>🗳️ Prochain rendez-vous militant : le 20 juillet à Marseille.</p>
 
-  <div class="image-container">
-    <img src="communique.jpg" alt="Communiqué officiel RSD" />
+    <div class="communique">
+    <img src="communique.jpg" alt="Communiqué officiel">
   </div>
+
+  <div class="card">
+    <p>📢 <strong>Lancement officiel du programme 2025</strong> — Le programme de votre nouveau parti est disponible sur notre site 📢</p>
+  </div>
+
+  <div class="card">
+    <p>🗳️ <strong>Rejoingez-nous !</strong> - Le RSD est un tout nouveau parti, et nous avons besoin de vous pour faire bouger les lignes ! 🗳️</p>
+  </div>
+
+  <div class="card">
+    <p>🌿 <strong>Nouvelle initiative locale</strong> - Chez vous, dans votre quartier, participez à des initiatives écologistes lancées par la fédération locale ! 🌿</p>
+  </div>
+
 </section>
 
 <footer>
@@ -132,4 +155,5 @@
 
 </body>
 </html>
+
 
