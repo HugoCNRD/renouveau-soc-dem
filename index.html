@@ -32,127 +32,6 @@ rel="stylesheet"
       margin: 10px 0;
     }
 
-<style>
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
-  body {
-    flex-grow: 1;
-    font-family: 'GlacialIndifference-Regular.otf', sans-serif;
-    background-color: #f4d3c8;
-    color: #1a1a1a;
-  }
-
-  header {
-    background-color: #6c1313;
-    padding: 30px;
-    text-align: center;
-  }
-
-  header img {
-    width: 140px;
-  }
-
-  header h1 {
-    color: #f4d3c8;
-    font-size: 32px;
-    margin: 10px 0;
-  }
-
-  nav {
-    background-color: #6c1313;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 15px 0;
-  }
-
-  nav a {
-    color: #f4d3c8;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-  }
-
-  .hero {
-    text-align: center;
-    padding: 60px 20px;
-  }
-
-  .hero h2 {
-    font-size: 28px;
-    color: #6c1313;
-  }
-
-  .hero p {
-    font-size: 18px;
-    margin: 15px 0;
-  }
-
-  .hero span {
-    font-weight: bold;
-  }
-
-  .section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .section h3 {
-    font-size: 26px;
-    color: #6c1313;
-    margin-bottom: 20px;
-  }
-
-  .section p {
-    font-size: 17px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
-
-  .section span {
-    font-weight: bold;
-  }
-
-  footer {
-    background-color: #6c1313;
-    color: #f4d3c8;
-    text-align: center;
-    padding: 20px;
-    margin-top: auto; /* pousse le footer en bas */
-    flex-shrink: 0;
-  }
-
-  .cta {
-    background-color: #6c1313;
-    color: #f4d3c8;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .cta h4 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .cta a {
-    background-color: #f4d3c8;
-    color: #6c1313;
-    padding: 12px 24px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-
-  @media (max-width: 700px) {
     nav {
       background-color: #6c1313;
       display: flex;
@@ -171,8 +50,6 @@ rel="stylesheet"
     .hero {
       text-align: center;
       padding: 60px 20px;
-      flex-wrap: wrap;
-      gap: 15px;
     }
 
     .hero h2 {
@@ -239,11 +116,7 @@ rel="stylesheet"
       font-weight: bold;
       border-radius: 5px;
       font-size: 16px;
-    .section h3 {
-      font-size: 22px;
     }
-  }
-</style>
 
     @media (max-width: 700px) {
       nav {
@@ -302,27 +175,43 @@ rel="stylesheet"
   <p><span>Rejoindre le Renouveau Social Démocrate, c’est faire le choix de la solidarité contre l’égoïsme</span>, de la coopération contre le chacun pour soi, de l’écologie populaire contre la croissance aveugle. C’est croire encore que la République sociale et laïque peut redevenir un horizon désirable pour toutes et tous.</p>
 
   <p>Il est temps d’écrire ensemble cette nouvelle page. Venez nous rencontrer, lisez notre programme, partagez vos idées, et construisons un avenir où le progrès n’est plus réservé à quelques-uns mais partagé par tous.</p>
+</section>
 
+  
 <section class="social" style="text-align: center; padding: 30px 20px; background-color: #f9e6e2; border-radius: 12px; max-width: 400px; margin: 40px auto;">
   <h4 style="color: #6c1313; margin-bottom: 25px; font-size: 22px;">Rejoignez-nous sur les réseaux sociaux</h4>
+  <div class="social-links" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
   <div class="social-links" style="display: flex; flex-direction: column; align-items: center; gap: 20px; font-weight: bold; font-size: 16px;">
 
     <a href="https://twitter.com/renouveauSD" target="_blank" rel="noopener" aria-label="Twitter"
+      style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1DA1F2; font-weight: bold; font-size: 16px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1DA1F2" viewBox="0 0 24 24"><path d="M23.954 4.569c-.885.392-1.83.656-2.825.775 1.014-.609 1.794-1.574 2.163-2.724-.95.555-2.005.959-3.127 1.184-.897-.956-2.178-1.555-3.594-1.555-2.72 0-4.924 2.204-4.924 4.923 0 .39.045.765.127 1.124-4.09-.205-7.719-2.164-10.148-5.144-.423.722-.666 1.562-.666 2.457 0 1.696.863 3.193 2.175 4.073-.8-.026-1.555-.246-2.213-.615v.061c0 2.372 1.685 4.348 3.918 4.796-.41.11-.841.17-1.287.17-.315 0-.624-.03-.927-.086.625 1.952 2.444 3.377 4.6 3.416-1.68 1.318-3.808 2.105-6.114 2.105-.397 0-.788-.023-1.17-.068 2.179 1.397 4.768 2.215 7.557 2.215 9.054 0 14-7.496 14-13.986 0-.21 0-.423-.015-.633.961-.695 1.8-1.562 2.46-2.549z"/></svg>
+      Twitter (@renouveauSD)
       style="color: #1DA1F2; text-decoration: none;">
       <i class="fab fa-twitter" style="margin-right: 12px;"></i> Twitter (@renouveauSD)
     </a>
 
     <a href="https://bsky.app/profile/renouveauSD" target="_blank" rel="noopener" aria-label="Bluesky"
+      style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1da1f2; font-weight: bold; font-size: 16px;">
+      <!-- Icône simple représentant une vague bleue pour Bluesky -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1da1f2" viewBox="0 0 24 24"><path d="M2 12s5-10 10-10 10 10 10 10-5 10-10 10S2 12 2 12z"/></svg>
+      Bluesky (@renouveauSD)
       style="color: #1da1f2; text-decoration: none;">
       <i class="fas fa-cloud" style="margin-right: 12px;"></i> Bluesky (@renouveauSD)
     </a>
 
     <a href="https://instagram.com/renouveauSD" target="_blank" rel="noopener" aria-label="Instagram"
+      style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #E1306C; font-weight: bold; font-size: 16px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#E1306C" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm4.5-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/></svg>
+      Instagram (@renouveauSD)
       style="color: #E1306C; text-decoration: none;">
       <i class="fab fa-instagram" style="margin-right: 12px;"></i> Instagram (@renouveauSD)
     </a>
 
     <a href="https://facebook.com/renouveauSD" target="_blank" rel="noopener" aria-label="Facebook"
+      style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1877F2; font-weight: bold; font-size: 16px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#1877F2" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 5 3.66 9.13 8.44 9.88v-6.99H8.9v-2.89h1.54v-2.21c0-1.52.9-2.36 2.28-2.36.66 0 1.35.12 1.35.12v1.49h-.76c-.75 0-.98.47-.98.95v1.8h1.67l-.27 2.89h-1.4v6.99C18.34 21.13 22 17 22 12z"/></svg>
+      Facebook (/renouveauSD)
       style="color: #1877F2; text-decoration: none;">
       <i class="fab fa-facebook" style="margin-right: 12px;"></i> Facebook (/renouveauSD)
     </a>
