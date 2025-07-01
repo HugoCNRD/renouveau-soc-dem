@@ -1,139 +1,68 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Renouveau Social Démocrate</title>
-  <link href="GlacialIndifference-Regular.otf" rel="stylesheet">
-  <link
-rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-/>
-<style>
+  <meta charset="UTF-8" />
+  <title>Test Footer Fixe</title>
+  <style>
 
-  * {
-    box-sizing: border-box;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #f4d3c8;
+      color: #1a1a1a;
+    }
 
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: 'GlacialIndifference-Regular.otf', sans-serif;
-    background-color: #f4d3c8;
-    color: #1a1a1a;
-  }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
+    header {
+      background-color: #6c1313;
+      color: #f4d3c8;
+      padding: 30px;
+      text-align: center;
+      flex-shrink: 0;
+    }
 
-  main {
-    flex: 1 0 auto;
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  header {
-    background-color: #6c1313;
-    padding: 30px;
-    text-align: center;
-  }
-
-  header img {
-    width: 140px;
-  }
-
-  header h1 {
-    color: #f4d3c8;
-    font-size: 32px;
-    margin: 10px 0;
-  }
-
-  nav {
-    background-color: #6c1313;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 15px 0;
-  }
-
-  nav a {
-    color: #f4d3c8;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-  }
-
-  .hero {
-    text-align: center;
-    padding: 60px 20px;
-  }
-
-  .hero h2 {
-    font-size: 28px;
-    color: #6c1313;
-  }
-
-  .hero p {
-    font-size: 18px;
-    margin: 15px 0;
-  }
-
-  .hero span {
-    font-weight: bold;
-  }
-
-  .section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .section h3 {
-    font-size: 26px;
-    color: #6c1313;
-    margin-bottom: 20px;
-  }
-
-  .section p {
-    font-size: 17px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
-
-  .section span {
-    font-weight: bold;
-  }
-
-  footer {
-    background-color: #6c1313;
-    color: #f4d3c8;
-    text-align: center;
-    padding: 20px;
-    flex-shrink: 0;
-  }
-
-  @media (max-width: 700px) {
     nav {
-      flex-wrap: wrap;
-      gap: 15px;
+      background-color: #6c1313;
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-shrink: 0;
     }
 
-    .hero h2 {
-      font-size: 24px;
+    nav a {
+      color: #f4d3c8;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
     }
 
-    .section h3 {
-      font-size: 22px;
+    main {
+      flex-grow: 1;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
-  }
-</style>
 
-
+    footer {
+      background-color: #6c1313;
+      color: #f4d3c8;
+      text-align: center;
+      padding: 20px;
+      flex-shrink: 0;
+    }
+  </style>
 </head>
 
 <body>
