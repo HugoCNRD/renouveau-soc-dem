@@ -3,31 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <title>Adhérer - Renouveau Social Démocrate</title>
-  <link href="GlacialIndifference-Regular.otf" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      font-family: 'GlacialIndifference-Regular.otf', sans-serif;
+      font-family: 'Glacial Indifference', sans-serif;
       background-color: #f4d3c8;
       color: #1a1a1a;
     }
-
     header {
       background-color: #6c1313;
       padding: 30px;
       text-align: center;
     }
-
     header img {
       width: 140px;
     }
-
     header h1 {
       color: #f4d3c8;
       font-size: 32px;
       margin: 10px 0;
     }
-
     nav {
       background-color: #6c1313;
       display: flex;
@@ -35,46 +31,40 @@
       gap: 25px;
       padding: 15px 0;
     }
-
     nav a {
       color: #f4d3c8;
       text-decoration: none;
       font-weight: bold;
       font-size: 15px;
     }
-
     nav a.active {
       text-decoration: underline;
     }
-
     .section {
       padding: 50px 20px;
       max-width: 600px;
       margin: 0 auto;
     }
-
     .section h3 {
       font-size: 26px;
       color: #6c1313;
       margin-bottom: 20px;
       text-align: center;
     }
-
     form {
       display: flex;
       flex-direction: column;
       gap: 18px;
     }
-
     label {
       font-weight: bold;
       font-size: 16px;
       color: #6c1313;
     }
-
     input[type="text"],
     input[type="email"],
-    textarea {
+    textarea,
+    input[type="number"] {
       padding: 10px;
       font-size: 15px;
       border: 2px solid #6c1313;
@@ -82,11 +72,9 @@
       font-family: 'Glacial Indifference', sans-serif;
       resize: vertical;
     }
-
     textarea {
       min-height: 100px;
     }
-
     button {
       background-color: #6c1313;
       color: #f4d3c8;
@@ -98,11 +86,43 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
-
     button:hover {
       background-color: #8a1b1b;
     }
-
+    .paypal-section {
+      margin-top: 30px;
+      padding: 20px;
+      border: 2px solid #6c1313;
+      border-radius: 10px;
+      background: #fff;
+      color: #1a1a1a;
+    }
+    .paypal-section label {
+      font-weight: normal;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+    .paypal-section input[type="radio"],
+    .paypal-section input[type="checkbox"] {
+      cursor: pointer;
+    }
+    .montant-libre {
+      margin-left: 25px;
+      margin-top: 10px;
+    }
+    .montant-libre input {
+      max-width: 120px;
+    }
+    .info-contact {
+      margin-top: 15px;
+      font-style: italic;
+      color: #6c1313;
+      text-align: center;
+    }
     footer {
       background-color: #6c1313;
       color: #f4d3c8;
@@ -110,13 +130,11 @@
       padding: 20px;
       margin-top: 60px;
     }
-
     @media (max-width: 700px) {
       nav {
         flex-wrap: wrap;
         gap: 15px;
       }
-
       .section h3 {
         font-size: 22px;
       }
@@ -131,15 +149,15 @@
 </header>
 
 <nav>
-  <a href="index.html">Accueil</a>
+  <a href="index.html">Nos Valeurs</a>
   <a href="programme.html">Programme</a>
   <a href="actualite.html">Actualités</a>
   <a href="adherer.html" class="active">Adhérer</a>
 </nav>
 
 <section class="section">
-  <h3>Formulaire d'adhésion</h3>
-  <form action="https://getform.io/f/agdlovqb" method="POST">
+  <h3>Formulaire d'adhésion & Paiement</h3>
+  <form id="adhesionForm">
     <label for="nom">Nom complet *</label>
     <input type="text" id="nom" name="Nom" required />
 
@@ -152,13 +170,177 @@
     <label for="message">Message / Commentaires</label>
     <textarea id="message" name="Message" placeholder="Vos motivations, questions..."></textarea>
 
-    <button type="submit">Envoyer votre demande. Nous vous contacterons par email sous 24h</button>
+    <div class="paypal-section">
+      <label><strong>Choisissez une option de paiement :</strong></label>
+
+      <label>
+        <input type="radio" name="payment_option" value="don" checked />
+        Don libre (minimum 1,00 €)
+      </label>
+      <div class="montant-libre" id="donMontantDiv">
+        <input
+          type="number"
+          step="0.01"
+          min="1"
+          id="donMontant"
+          placeholder="Montant don (€)"
+          value="2.00"
+        />
+      </div>
+
+      <label>
+        <input type="radio" name="payment_option" value="adhesion" />
+        Adhésion annuelle (ou renouvellement)
+      </label>
+
+      <div class="paypal-options" id="adhesionOptions" style="display:none; margin-left: 25px; margin-top: 10px;">
+        <label><input type="radio" name="adhesion_amount" value="15.00" /> 15,00 €</label>
+        <label><input type="radio" name="adhesion_amount" value="30.00" /> 30,00 €</label>
+        <label><input type="radio" name="adhesion_amount" value="50.00" /> 50,00 €</label>
+        <label><input type="radio" name="adhesion_amount" value="75.00" /> 75,00 €</label>
+
+        <label style="margin-top: 15px; font-weight: normal;">
+          Montant libre (min 15,00 €) :
+          <input
+            type="number"
+            step="0.01"
+            min="15"
+            id="adhesionMontantLibre"
+            placeholder="Montant libre (€)"
+          />
+        </label>
+      </div>
+
+      <label style="margin-top: 20px; font-weight: normal;">
+        <input type="checkbox" id="exoneration" name="exoneration" />
+        Je déclare sur l'honneur que mes revenus ne me permettent pas d'acquitter de cotisation. Je souhaite être exempté(e) de cotisation. (12 mois)
+      </label>
+    </div>
+
+    <button type="submit">Envoyer ma demande et payer</button>
+    <p class="info-contact">Nous vous contacterons sous 24h après l’envoi du formulaire.</p>
   </form>
 </section>
 
 <footer>
   <p>&copy; 2025 Renouveau Social Démocrate — Ensemble pour un meilleur avenir</p>
 </footer>
+
+<script>
+  const adhesionForm = document.getElementById("adhesionForm");
+  const paymentOptions = document.getElementsByName("payment_option");
+  const adhesionOptionsDiv = document.getElementById("adhesionOptions");
+  const donMontantDiv = document.getElementById("donMontantDiv");
+  const donMontantInput = document.getElementById("donMontant");
+  const adhesionMontantLibreInput = document.getElementById("adhesionMontantLibre");
+  const exonerationCheckbox = document.getElementById("exoneration");
+
+  function updatePaymentOptionDisplay() {
+    const selected = Array.from(paymentOptions).find(r => r.checked).value;
+    if(selected === "don") {
+      adhesionOptionsDiv.style.display = "none";
+      donMontantDiv.style.display = "block";
+    } else {
+      adhesionOptionsDiv.style.display = "block";
+      donMontantDiv.style.display = "none";
+    }
+  }
+
+  paymentOptions.forEach(radio => {
+    radio.addEventListener("change", updatePaymentOptionDisplay);
+  });
+
+  updatePaymentOptionDisplay();
+
+  adhesionForm.addEventListener("submit", function(event){
+    event.preventDefault();
+
+    // Validation exonération
+    if (exonerationCheckbox.checked) {
+      // Envoi Getform uniquement, sans paiement
+      sendFormData().then(() => {
+        alert("Demande envoyée. Nous vous contacterons sous 24h.");
+        adhesionForm.reset();
+        updatePaymentOptionDisplay();
+      }).catch(() => {
+        alert("Erreur lors de l'envoi. Veuillez réessayer.");
+      });
+      return;
+    }
+
+    // Sinon paiement requis
+    // Récupérer montant à payer
+    let montant = 0;
+    const paymentType = Array.from(paymentOptions).find(r => r.checked).value;
+
+    if(paymentType === "don") {
+      montant = parseFloat(donMontantInput.value);
+      if (isNaN(montant) || montant < 1) {
+        alert("Merci d'entrer un montant de don libre d'au moins 1 €.");
+        return;
+      }
+    } else {
+      // adhésion
+      // vérifier montant libre sinon choisir radio
+      const montantLibre = parseFloat(adhesionMontantLibreInput.value);
+      if (!isNaN(montantLibre) && montantLibre >= 15) {
+        montant = montantLibre;
+      } else {
+        // chercher radio sélectionné
+        const sel = document.querySelector('input[name="adhesion_amount"]:checked');
+        if (!sel) {
+          alert("Merci de choisir un montant d'adhésion ou saisir un montant libre d'au moins 15 €.");
+          return;
+        }
+        montant = parseFloat(sel.value);
+      }
+    }
+
+    // Préparer envoi Getform puis redirection PayPal
+    sendFormData().then(() => {
+      // Construire url PayPal
+      const business = "hugo75012@outlook.com"; // <-- MODIFIE ICI avec ton email PayPal
+      const url = new URL("https://www.paypal.com/cgi-bin/webscr");
+      url.searchParams.set("cmd", "_xclick");
+      url.searchParams.set("business", business);
+      url.searchParams.set("item_name", "Adhésion Renouveau Social Démocrate");
+      url.searchParams.set("currency_code", "EUR");
+      url.searchParams.set("amount", montant.toFixed(2));
+      window.location.href = url.toString();
+    }).catch(() => {
+      alert("Erreur lors de l'envoi du formulaire. Veuillez réessayer.");
+    });
+  });
+
+  // Fonction pour envoyer les données vers Getform
+  async function sendFormData() {
+    const formData = new FormData();
+    formData.append("Nom", document.getElementById("nom").value);
+    formData.append("Email", document.getElementById("email").value);
+    formData.append("Téléphone", document.getElementById("telephone").value);
+    formData.append("Message", document.getElementById("message").value);
+
+    // On peut aussi ajouter info paiement / exonération pour info interne
+    const paymentType = Array.from(paymentOptions).find(r => r.checked).value;
+    formData.append("Type de paiement", paymentType);
+    if (paymentType === "don") {
+      formData.append("Montant", donMontantInput.value);
+    } else {
+      const montantLibre = adhesionMontantLibreInput.value;
+      formData.append("Montant", montantLibre || document.querySelector('input[name="adhesion_amount"]:checked').value);
+    }
+    formData.append("Exonération", exonerationCheckbox.checked ? "Oui" : "Non");
+
+    const response = await fetch("https://getform.io/f/agdlovqb", {
+      method: "POST",
+      body: formData,
+    });
+    if (!response.ok) {
+      throw new Error("Erreur envoi formulaire");
+    }
+    return response;
+  }
+</script>
 
 </body>
 </html>
