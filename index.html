@@ -9,20 +9,32 @@ rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 />
 <style>
+
+  * {
+    box-sizing: border-box;
+  }
+
   html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
   }
 
   body {
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: 'GlacialIndifference-Regular.otf', sans-serif;
     background-color: #f4d3c8;
     color: #1a1a1a;
+  }
+
+
+  main {
+    flex: 1 0 auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
   }
 
   header {
@@ -102,30 +114,7 @@ rel="stylesheet"
     color: #f4d3c8;
     text-align: center;
     padding: 20px;
-    margin-top: auto; /* pousse le footer en bas */
     flex-shrink: 0;
-  }
-
-  .cta {
-    background-color: #6c1313;
-    color: #f4d3c8;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .cta h4 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .cta a {
-    background-color: #f4d3c8;
-    color: #6c1313;
-    padding: 12px 24px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    font-size: 16px;
   }
 
   @media (max-width: 700px) {
@@ -144,6 +133,7 @@ rel="stylesheet"
   }
 </style>
 
+
 </head>
 
 <body>
@@ -159,7 +149,9 @@ rel="stylesheet"
   <a href="actualite.html">Actualités</a>
   <a href="adherer.html">Adhérer</a>
 </nav>
-
+  
+<main>
+  
 <section class="hero">
   <h2>Ensemble pour un meilleur avenir</h2>
   <p><span>Le Renouveau Social Démocrate représente l'ambition d'un réel changement</span></p>
@@ -220,7 +212,7 @@ rel="stylesheet"
     </a>
   </p>
 </section>
-
+<main/>
 
 
 <footer>
