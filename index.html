@@ -1,44 +1,164 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Test Footer Fixe</title>
+  <meta charset="UTF-8">
+  <title>Renouveau Social Démocrate</title>
+  <link href="GlacialIndifference-Regular.otf" rel="stylesheet">
+  <link
+rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
   <style>
-
-    * {
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      font-family: Arial, sans-serif;
+      font-family: 'GlacialIndifference-Regular.otf', sans-serif;
       background-color: #f4d3c8;
       color: #1a1a1a;
     }
 
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
     header {
       background-color: #6c1313;
-      color: #f4d3c8;
       padding: 30px;
       text-align: center;
-      flex-shrink: 0;
     }
 
+    header img {
+      width: 140px;
+    }
+
+    header h1 {
+      color: #f4d3c8;
+      font-size: 32px;
+      margin: 10px 0;
+    }
+
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  body {
+    flex-grow: 1;
+    font-family: 'GlacialIndifference-Regular.otf', sans-serif;
+    background-color: #f4d3c8;
+    color: #1a1a1a;
+  }
+
+  header {
+    background-color: #6c1313;
+    padding: 30px;
+    text-align: center;
+  }
+
+  header img {
+    width: 140px;
+  }
+
+  header h1 {
+    color: #f4d3c8;
+    font-size: 32px;
+    margin: 10px 0;
+  }
+
+  nav {
+    background-color: #6c1313;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+  }
+
+  nav a {
+    color: #f4d3c8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+    color: #6c1313;
+  }
+
+  .hero p {
+    font-size: 18px;
+    margin: 15px 0;
+  }
+
+  .hero span {
+    font-weight: bold;
+  }
+
+  .section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .section h3 {
+    font-size: 26px;
+    color: #6c1313;
+    margin-bottom: 20px;
+  }
+
+  .section p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .section span {
+    font-weight: bold;
+  }
+
+  footer {
+    background-color: #6c1313;
+    color: #f4d3c8;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* pousse le footer en bas */
+    flex-shrink: 0;
+  }
+
+  .cta {
+    background-color: #6c1313;
+    color: #f4d3c8;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .cta h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .cta a {
+    background-color: #f4d3c8;
+    color: #6c1313;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 700px) {
     nav {
       background-color: #6c1313;
-      padding: 15px 0;
       display: flex;
       justify-content: center;
       gap: 25px;
-      flex-shrink: 0;
+      padding: 15px 0;
     }
 
     nav a {
@@ -48,11 +168,47 @@
       font-size: 15px;
     }
 
-    main {
-      flex-grow: 1;
-      padding: 20px;
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      color: #6c1313;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    .hero span {
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 50px 20px;
       max-width: 1000px;
       margin: 0 auto;
+    }
+
+    .section h3 {
+      font-size: 26px;
+      color: #6c1313;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .section span {
+      font-weight: bold;
     }
 
     footer {
@@ -60,7 +216,48 @@
       color: #f4d3c8;
       text-align: center;
       padding: 20px;
-      flex-shrink: 0;
+      margin-top: 60px;
+    }
+
+    .cta {
+      background-color: #6c1313;
+      color: #f4d3c8;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .cta h4 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .cta a {
+      background-color: #f4d3c8;
+      color: #6c1313;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      font-size: 16px;
+    .section h3 {
+      font-size: 22px;
+    }
+  }
+</style>
+
+    @media (max-width: 700px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .hero h2 {
+        font-size: 24px;
+      }
+
+      .section h3 {
+        font-size: 22px;
+      }
     }
   </style>
 </head>
@@ -78,9 +275,7 @@
   <a href="actualite.html">Actualités</a>
   <a href="adherer.html">Adhérer</a>
 </nav>
-  
-<main>
-  
+
 <section class="hero">
   <h2>Ensemble pour un meilleur avenir</h2>
   <p><span>Le Renouveau Social Démocrate représente l'ambition d'un réel changement</span></p>
@@ -107,7 +302,7 @@
   <p><span>Rejoindre le Renouveau Social Démocrate, c’est faire le choix de la solidarité contre l’égoïsme</span>, de la coopération contre le chacun pour soi, de l’écologie populaire contre la croissance aveugle. C’est croire encore que la République sociale et laïque peut redevenir un horizon désirable pour toutes et tous.</p>
 
   <p>Il est temps d’écrire ensemble cette nouvelle page. Venez nous rencontrer, lisez notre programme, partagez vos idées, et construisons un avenir où le progrès n’est plus réservé à quelques-uns mais partagé par tous.</p>
-  
+
 <section class="social" style="text-align: center; padding: 30px 20px; background-color: #f9e6e2; border-radius: 12px; max-width: 400px; margin: 40px auto;">
   <h4 style="color: #6c1313; margin-bottom: 25px; font-size: 22px;">Rejoignez-nous sur les réseaux sociaux</h4>
   <div class="social-links" style="display: flex; flex-direction: column; align-items: center; gap: 20px; font-weight: bold; font-size: 16px;">
@@ -141,7 +336,7 @@
     </a>
   </p>
 </section>
-<main/>
+
 
 
 <footer>
