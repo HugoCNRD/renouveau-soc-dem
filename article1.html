@@ -1,36 +1,156 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Article — Rencontre militante à Lyon</title>
-  <link href="GlacialIndifference-Regular.otf" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Lancement du programme — Renouveau Social Démocrate</title>
+  <link href="GlacialIndifference-Regular.otf" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
   <style>
-    body { margin:0; font-family:'GlacialIndifference-Regular.otf',sans-serif; background:#f4d3c8; color:#1a1a1a; padding-bottom:60px; }
-    header, nav, .footer { background:#6c1313; color:#f4d3c8; text-align:center; }
-    header { padding:30px; }
-    nav { display:flex; justify-content:center; gap:25px; padding:15px 0; }
-    nav a { color:#f4d3c8; text-decoration:none; font-weight:bold; font-size:15px; }
-    .section { padding:50px 20px; max-width:1000px; margin:0 auto; }
-    .section h2 { color:#6c1313; font-size:28px; }
-    .section p { font-size:17px; line-height:1.7; margin-bottom:20px; }
-    .footer { position:fixed; bottom:0; left:0; width:100%; padding:15px 0; font-size:16px; }
+    body {
+      margin: 0;
+      font-family: 'GlacialIndifference-Regular.otf', sans-serif;
+      background-color: #f4d3c8;
+      color: #1a1a1a;
+      padding-bottom: 60px;
+    }
+
+    header {
+      background-color: #6c1313;
+      padding: 30px;
+      text-align: center;
+    }
+
+    header img {
+      width: 140px;
+    }
+
+    header h1 {
+      color: #f4d3c8;
+      font-size: 32px;
+      margin: 10px 0;
+    }
+
+    nav {
+      background-color: #6c1313;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #f4d3c8;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    /* Cadre blanc central */
+    .article-container {
+      background-color: white;
+      max-width: 900px;
+      margin: 40px auto;
+      border-radius: 12px;
+      padding: 30px 40px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      color: #1a1a1a;
+    }
+
+    .article-container h2 {
+      color: #6c1313;
+      font-size: 28px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .article-container p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .article-container p strong {
+      font-weight: bold;
+    }
+
+    .article-container a {
+      color: #6c1313;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #6c1313;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+      font-size: 16px;
+      z-index: 1000;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .article-container {
+        margin: 20px 15px;
+        padding: 20px;
+      }
+
+      .article-container h2 {
+        font-size: 24px;
+      }
+
+      .article-container p {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-<header><img src="RSD.jpg" alt="Logo RSD"><h1>Renouveau Social Démocrate</h1></header>
-<nav><a href="index.html">Accueil</a><a href="programme.html">Programme</a><a href="actualite.html">Actualités</a><a href="adherer.html">Adhérer</a><a href="quisommesnous.html">Qui sommes-nous</a></nav>
+<header>
+  <img src="RSD.jpg" alt="Logo RSD" />
+  <h1>Renouveau Social Démocrate</h1>
+</header>
 
-<section class="section">
-  <h2>Rencontre militante à Lyon</h2>
-  <p><em>Publié le 10 avril 2025</em></p>
-  <p>Ce 10 avril 2025, notre mouvement était à Lyon pour une rencontre citoyenne…</p>
-  <p>Les échanges ont permis de recueillir des idées fortes autour de l’écologie et de l’emploi local. Les intervenant·e·s ont notamment insisté sur…</p>
-  <p>Un grand merci à toutes celles et ceux qui se sont mobilisé·e·s. Prochain rendez-vous : le 20 mai à Marseille…</p>
-</section>
+<nav>
+  <a href="index.html">Accueil</a>
+  <a href="programme.html">Programme</a>
+  <a href="actualite.html">Actualités</a>
+  <a href="nous.html">Qui sommes-nous ?</a>
+  <a href="adherer.html">Adhérer</a>
+</nav>
 
-<footer class="footer"><p>&copy; 2025 Renouveau Social Démocrate — Ensemble pour un meilleur avenir</p></footer>
+<div class="article-container">
+  <h2>Lancement officiel du programme du Renouveau Social Démocrate</h2>
+
+  <p>Le <strong>Renouveau Social Démocrate</strong> a le plaisir d’annoncer le lancement officiel de son programme ambitieux, conçu pour répondre aux défis sociaux, économiques et écologiques que traverse notre pays.</p>
+
+  <p>Face à la montée des inégalités, à la crise climatique, et à la remise en cause des services publics, notre programme propose une vision claire et déterminée : construire une société plus juste, solidaire et respectueuse du vivant.</p>
+
+  <p>Ce programme est le fruit d’une large consultation citoyenne et d’un travail collectif engagé. Il s’articule autour de plusieurs piliers majeurs : la justice fiscale, la protection des services publics, la transition écologique ambitieuse, et la promotion de l’égalité réelle entre toutes et tous.</p>
+
+  <p>Nous appelons toutes les citoyennes et tous les citoyens à découvrir ce projet porteur d’espoir et à nous rejoindre pour faire entendre cette voix progressiste et écologiste dans le débat public.</p>
+
+  <p>Ensemble, nous pouvons changer le cours des choses et bâtir un avenir durable et solidaire.</p>
+
+  <p>Pour en savoir plus, consultez <a href="programme.html">notre programme complet ici</a>.</p>
+</div>
+
+<footer class="footer">
+  <p>&copy; 2025 Renouveau Social Démocrate — Ensemble pour un meilleur avenir</p>
+</footer>
+
 </body>
 </html>
+
 
