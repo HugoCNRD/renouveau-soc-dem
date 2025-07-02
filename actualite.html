@@ -1,156 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Actualités - Renouveau Social Démocrate</title>
-  <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>Actualités — Renouveau Social Démocrate</title>
+  <link href="GlacialIndifference-Regular.otf" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Glacial Indifference', sans-serif;
-      background-color: #f4d3c8;
-      color: #1a1a1a;
-    }
-
-    header {
-      background-color: #6c1313;
-      padding: 30px;
-      text-align: center;
-    }
-
-    header img {
-      width: 140px;
-    }
-
-    header h1 {
-      color: #f4d3c8;
-      font-size: 32px;
-      margin: 10px 0;
-    }
-
-    nav {
-      background-color: #6c1313;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      padding: 15px 0;
-    }
-
-    nav a {
-      color: #f4d3c8;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 15px;
-    }
-
-    nav a.active {
-      text-decoration: underline;
-    }
-
-    .section {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .section h3 {
-      font-size: 26px;
-      color: #6c1313;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    .card {
-      background-color: #ffffff;
-      padding: 25px;
-      margin-bottom: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(108, 19, 19, 0.15);
-    }
-
-    .card p {
-      font-size: 17px;
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    .card strong {
-      color: #6c1313;
-    }
-
-    .communique {
-      text-align: center;
-      margin: 40px 0;
-    }
-
-    .communique img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(108, 19, 19, 0.2);
-    }
-
-    footer {
-      background-color: #6c1313;
-      color: #f4d3c8;
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
-    }
-
-    @media (max-width: 700px) {
-      nav {
-        flex-wrap: wrap;
-        gap: 15px;
-      }
-
-      .section h3 {
-        font-size: 22px;
-      }
-
-      .card p {
-        font-size: 16px;
-      }
-    }
+    body { margin:0; font-family:'GlacialIndifference-Regular.otf',sans-serif; background:#f4d3c8; color:#1a1a1a; padding-bottom:60px; }
+    header, nav, .footer { background:#6c1313; color:#f4d3c8; text-align:center; }
+    header { padding:30px; }
+    header img { width:140px; }
+    nav { display:flex; justify-content:center; gap:25px; padding:15px 0; }
+    nav a { color:#f4d3c8; text-decoration:none; font-weight:bold; font-size:15px; }
+    .submenu { background:#8a1b1b; display:flex; justify-content:center; gap:20px; padding:10px 0; }
+    .submenu a { color:#f4d3c8; text-decoration:none; font-weight:bold; font-size:14px; }
+    .submenu a.active { text-decoration:underline; }
+    .section { padding:50px 20px; max-width:1000px; margin:0 auto; }
+    .news-grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); }
+    .news-box { background:#fff; border-radius:10px; padding:20px; box-shadow:0 0 8px rgba(0,0,0,0.1); cursor:pointer; }
+    .news-box h4 { margin:0 0 10px; color:#6c1313; }
+    .news-box p { font-size:15px; line-height:1.4; }
+    .footer { position:fixed; bottom:0; left:0; width:100%; padding:15px 0; font-size:16px; }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="RSD.jpg" alt="Logo RSD" />
+  <img src="RSD.jpg" alt="Logo RSD">
   <h1>Renouveau Social Démocrate</h1>
 </header>
 
 <nav>
   <a href="index.html">Accueil</a>
   <a href="programme.html">Programme</a>
-  <a href="actualite.html">Actualités</a>
-  <a href="nous.html">Qui sommes-nous ?</a>
+  <a href="actualite.html" class="active">Actualités</a>
   <a href="adherer.html">Adhérer</a>
+  <a href="quisommesnous.html">Qui sommes-nous</a>
 </nav>
 
-<section class="section">
-  <h3>Actualités</h3>
+<div class="submenu">
+  <a href="communiques.html">Communiqués de presse</a>
+  <a href="engagements.html">Nos engagements</a>
+  <a href="actualite.html" class="active">Dernières actualités</a>
+</div>
 
-    <div class="communique">
-    <img src="DA   CP RDS.jpg" alt="Communiqué officiel">
-  </div>
 
-  <div class="card">
-    <p>📢 <strong>Lancement officiel du programme 2025</strong> — Le programme de votre nouveau parti est disponible sur notre site 📢</p>
-  </div>
 
-  <div class="card">
-    <p>🗳️ <strong>Création du RSD</strong> — Le RSD est un tout nouveau parti, et nous avons besoin de vous pour faire bouger les lignes ! Rejoignez-nous et participez à la création du monde de demain ! 🗳️</p>
-  </div>
-
-</section>
-
-<footer>
+<footer class="footer">
   <p>&copy; 2025 Renouveau Social Démocrate — Ensemble pour un meilleur avenir</p>
 </footer>
 
 </body>
+</html>
+
 </html>
 
 
