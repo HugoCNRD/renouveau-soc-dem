@@ -1,46 +1,251 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Nos engagements — Renouveau Social Démocrate</title>
-  <link href="GlacialIndifference-Regular.otf" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Communiqués de presse — Renouveau Social Démocrate</title>
+  <link href="GlacialIndifference-Regular.otf" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
   <style>
+    body {
+      margin: 0;
+      font-family: 'GlacialIndifference-Regular.otf', sans-serif;
+      background-color: #f4d3c8;
+      color: #1a1a1a;
+      padding-bottom: 60px;
+    }
 
-    body { margin:0; font-family:'GlacialIndifference-Regular.otf',sans-serif; background:#f4d3c8; color:#1a1a1a; padding-bottom:60px; }
-    header, nav, .footer { background:#6c1313; color:#f4d3c8; text-align:center; }
-    header { padding:30px; }
+    header {
+      background-color: #6c1313;
+      padding: 20px;
+      text-align: center;
+    }
+
     header img {
-  width: 100px;
-}
-    nav { display:flex; justify-content:center; gap:25px; padding:15px 0; }
-    nav a { color:#f4d3c8; text-decoration:none; font-weight:bold; font-size:15px; }
-    .submenu { background:#8a1b1b; display:flex; justify-content:center; gap:20px; padding:10px 0; }
-    .submenu a { color:#f4d3c8; text-decoration:none; font-weight:bold; font-size:14px; }
-    .submenu a.active { text-decoration:underline; }
-    .section { padding:50px 20px; max-width:1000px; margin:0 auto; }
-    .eng { background:#fff; border-radius:10px; padding:20px; box-shadow:0 0 8px rgba(0,0,0,0.1); margin-bottom:20px; }
-    .eng h3 { color:#6c1313; margin-top:0; }
-    .footer { position:fixed; bottom:0; left:0; width:100%; padding:15px 0; font-size:16px; }
+      width: 120px;
+    }
+
+    header h1 {
+      color: #f4d3c8;
+      font-size: 30px;
+      margin: 8px 0;
+    }
+
+    nav {
+      background-color: #6c1313;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: #f4d3c8;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    /* Sous-menu sous la nav principale */
+    .subnav {
+      background-color: #8a1a1a;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+      font-weight: bold;
+    }
+
+    .subnav a {
+      color: #f4d3c8;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .subnav a:hover,
+    .subnav a.active {
+      background-color: #f4d3c8;
+      color: #6c1313;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      color: #6c1313;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .communique {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .communique h3 {
+      font-size: 22px;
+      color: #6c1313;
+      margin-bottom: 20px;
+    }
+
+    .communique img {
+      max-width: 700px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #6c1313;
+      color: white;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 16px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .subnav {
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .section h2 {
+        font-size: 24px;
+      }
+
+      .communique h3 {
+        font-size: 20px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-<header><img src="RSD.jpg" alt="Logo RSD"><h1>Renouveau Social Démocrate</h1></header>
-<nav><a href="index.html">Accueil</a><a href="programme.html">Programme</a><a href="actualite.html">Actualités</a><a href="adherer.html">Adhérer</a><a href="quisommesnous.html">Qui sommes-nous</a></nav>
-<div class="submenu">
-  <a href="communiques.html">Communiqués de presse</a>
-  <a href="engagements.html" class="active">Nos engagements</a>
-  <a href="actualite.html">Dernières actualités</a>
-</div>
+<header>
+  <img src="RSD.jpg" alt="Logo RSD">
+  <h1>Renouveau Social Démocrate</h1>
+</header>
+
+<nav>
+  <a href="index.html">Accueil</a>
+  <a href="programme.html">Programme</a>
+  <a href="actualite.html">Actualités</a>
+  <a href="nous.html">Qui sommes-nous ?</a>
+  <a href="adherer.html">Adhérer</a>
+</nav>
+
+  <div class="subnav">
+    <a href="communique.html" class="active">Communiqués de presse</a>
+    <a href="engagements.html">Nos engagements</a>
+    <a href="actualite.html">Dernières actualités</a>
+  </div>
 
 <section class="section">
-  <div class="eng"><h3>Justice sociale</h3><p>Revalorisation des minima sociaux et lutte contre la pauvreté.</p></div>
-  <div class="eng"><h3>Transition écologique</h3><p>Investissement massif dans les emplois verts et la rénovation énergétique.</p></div>
-  <div class="eng"><h3>Démocratie participative</h3><p>Mise en place de consultations citoyennes régulières.</p></div>
+  <h2>Nos engagements</h2>
+
+  <div class="engagement">
+    <h3>Égalité réelle pour toutes et tous</h3>
+    <p>Nous défendons une société où chacun dispose des mêmes droits et des mêmes chances, sans discrimination liée au genre, à l'origine ou au territoire.</p>
+  </div>
+
+  <div class="engagement">
+    <h3>Protection des services publics</h3>
+    <p>Garantir un service public de qualité, accessible partout et pour tous, c'est préserver la solidarité et la cohésion nationale.</p>
+  </div>
+
+  <div class="engagement">
+    <h3>Fiscalité juste et équitable</h3>
+    <p>Les plus riches et les grandes entreprises doivent contribuer à hauteur de leurs moyens pour financer l’intérêt général.</p>
+  </div>
+
+  <div class="engagement">
+    <h3>Transition écologique ambitieuse</h3>
+    <p>Nous investirons massivement dans la protection du vivant et la transition énergétique au service des générations futures.</p>
+  </div>
+
+  <div class="engagement">
+    <h3>Hausse des salaires et des retraites</h3>
+    <p>Aucun citoyen ne doit vivre dans la précarité. Nous défendons des revenus dignes pour toutes et tous.</p>
+  </div>
+
+  <div class="engagement">
+    <h3>Éducation gratuite et émancipatrice</h3>
+    <p>L'école doit être un lieu d’émancipation et non de reproduction sociale, avec les mêmes moyens pour chaque élève.</p>
+  </div>
+
+  <div class="engagement">
+    <h3>Refonte du système de santé</h3>
+    <p>Un hôpital public renforcé, des soignants respectés, et l’accès aux soins garanti partout sur le territoire.</p>
+  </div>
+
+  <div class="engagement">
+    <h3>Économie solidaire et responsable</h3>
+    <p>Nous privilégions l'économie locale, l'économie sociale et solidaire, et les entreprises qui respectent l’humain et la planète.</p>
+  </div>
+
+  <div class="engagement">
+    <h3>Lutte contre l’extrême droite</h3>
+    <p>Nous combattons fermement toutes les idéologies de haine, de rejet et de repli sur soi.</p>
+  </div>
+
+  <div class="engagement">
+    <h3>Écologie populaire et sociale</h3>
+    <p>L’écologie doit être accessible à toutes et tous et améliorer la vie quotidienne des classes populaires et moyennes.</p>
+  </div>
+
+  <div class="engagement">
+    <h3>Parité dans la vie publique</h3>
+    <p>Nous imposerons la parité dans les instances de décision politique, économique et syndicale.</p>
+  </div>
+
+  <div class="engagement">
+    <h3>Renforcement des droits des travailleurs</h3>
+    <p>Nous lutterons contre la précarisation et défendrons de nouveaux droits pour les travailleurs et travailleuses.</p>
+  </div>
+
+  <div class="engagement">
+    <h3>Accueil digne des exilés</h3>
+    <p>Chaque personne doit être accueillie avec humanité et respect, dans le respect des droits fondamentaux.</p>
+  </div>
+
+  <div class="engagement">
+    <h3>Investissement pour la jeunesse</h3>
+    <p>Nous soutiendrons l’éducation populaire, l’accès à la culture et l’engagement citoyen des jeunes.</p>
+  </div>
+
+  <div class="engagement">
+    <h3>Démocratie locale et participative</h3>
+    <p>Nous voulons donner plus de pouvoir aux citoyennes et citoyens en renforçant les conseils citoyens et la démocratie directe locale.</p>
+  </div>
+
 </section>
 
-<footer class="footer"><p>&copy; 2025 Renouveau Social Démocrate — Ensemble pour un meilleur avenir</p></footer>
+<footer class="footer">
+  <p>&copy; 2025 Renouveau Social Démocrate — Ensemble pour un meilleur avenir</p>
+</footer>
+
 </body>
 </html>
+
 
