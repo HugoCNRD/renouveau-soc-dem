@@ -1,58 +1,233 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Actualités — Renouveau Social Démocrate</title>
-  <link href="GlacialIndifference-Regular.otf" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Communiqués de presse — Renouveau Social Démocrate</title>
+  <link href="GlacialIndifference-Regular.otf" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
   <style>
-    body { margin:0; font-family:'GlacialIndifference-Regular.otf',sans-serif; background:#f4d3c8; color:#1a1a1a; padding-bottom:60px; }
-    header, nav, .footer { background:#6c1313; color:#f4d3c8; text-align:center; }
-    header { padding:30px; }
-    header img { width:140px; }
-    nav { display:flex; justify-content:center; gap:25px; padding:15px 0; }
-    nav a { color:#f4d3c8; text-decoration:none; font-weight:bold; font-size:15px; }
-    .submenu { background:#8a1b1b; display:flex; justify-content:center; gap:20px; padding:10px 0; }
-    .submenu a { color:#f4d3c8; text-decoration:none; font-weight:bold; font-size:14px; }
-    .submenu a.active { text-decoration:underline; }
-    .section { padding:50px 20px; max-width:1000px; margin:0 auto; }
-    .news-grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); }
-    .news-box { background:#fff; border-radius:10px; padding:20px; box-shadow:0 0 8px rgba(0,0,0,0.1); cursor:pointer; }
-    .news-box h4 { margin:0 0 10px; color:#6c1313; }
-    .news-box p { font-size:15px; line-height:1.4; }
-    .footer { position:fixed; bottom:0; left:0; width:100%; padding:15px 0; font-size:16px; }
+    body {
+      margin: 0;
+      font-family: 'GlacialIndifference-Regular.otf', sans-serif;
+      background-color: #f4d3c8;
+      color: #1a1a1a;
+      padding-bottom: 60px;
+    }
+
+    header {
+      background-color: #6c1313;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      width: 120px;
+    }
+
+    header h1 {
+      color: #f4d3c8;
+      font-size: 30px;
+      margin: 8px 0;
+    }
+
+    nav {
+      background-color: #6c1313;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: #f4d3c8;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+
+    .subnav {
+      background-color: #8a1a1a;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+      font-weight: bold;
+    }
+
+    .subnav a {
+      color: #f4d3c8;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .subnav a:hover,
+    .subnav a.active {
+      background-color: #f4d3c8;
+      color: #6c1313;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      color: #6c1313;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .communique {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .communique h3 {
+      font-size: 22px;
+      color: #6c1313;
+      margin-bottom: 20px;
+    }
+
+    .communique img {
+      max-width: 700px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Nouveaux cadres d'actualité */
+    .actualites {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .actualite-card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+      width: 280px;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .actualite-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    .actualite-card a {
+      color: #6c1313;
+      text-decoration: none;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .actualite-card a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #6c1313;
+      color: white;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 16px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 900px) {
+      .actualites {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .actualite-card {
+        width: 90%;
+        max-width: 400px;
+      }
+    }
   </style>
 </head>
+
 <body>
+  <header>
+    <img src="RSD.jpg" alt="Logo RSD" />
+    <h1>Renouveau Social Démocrate</h1>
+  </header>
 
-<header>
-  <img src="RSD.jpg" alt="Logo RSD">
-  <h1>Renouveau Social Démocrate</h1>
-</header>
-
-<nav>
-  <a href="index.html">Accueil</a>
-  <a href="programme.html">Programme</a>
-  <a href="actualite.html" class="active">Actualités</a>
-  <a href="nous.html">Qui sommes-nous ?</a>
-  <a href="adherer.html">Adhérer</a>
-</nav>
-
-<div class="submenu">
-  <a href="communiques.html">Communiqués de presse</a>
-  <a href="engagements.html">Nos engagements</a>
-  <a href="actualite.html" class="active">Dernières actualités</a>
-</div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="programme.html">Programme</a>
+    <a href="actualite.html">Actualités</a>
+    <a href="nous.html">Qui sommes-nous ?</a>
+    <a href="adherer.html">Adhérer</a>
+  </nav>
 
 
+  <div class="subnav">
+    <a href="communique.html">Communiqués de presse</a>
+    <a href="engagements.html">Nos engagements</a>
+    <a href="dernieres-actualites.html" class="active">Dernières actualités</a>
+  </div>
 
-<footer class="footer">
-  <p>&copy; 2025 Renouveau Social Démocrate — Ensemble pour un meilleur avenir</p>
-</footer>
+  <section class="section">
+    <h2>Nos récents communiqués</h2>
 
+    <div class="communique">
+      <h3>Communiqué du 20 juin 2025 — Mobilisation nationale pour les services publics</h3>
+      <img src="communique1.jpg" alt="Communiqué du 20 juin 2025" />
+    </div>
+
+
+    <div class="actualites">
+      <div class="actualite-card">
+        <a href="communique1.jpg" target="_blank" rel="noopener" aria-label="Lancement du RSD - communiqué">
+          Lancement du RSD
+        </a>
+      </div>
+      <div class="actualite-card">
+        <a href="article-programme-2025.html" target="_blank" rel="noopener" aria-label="Programme 2025">
+          Programme 2025
+        </a>
+      </div>
+      <div class="actualite-card">
+        Ce que nous défendons pour une société plus juste et solidaire.
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Renouveau Social Démocrate — Ensemble pour un meilleur avenir</p>
+  </footer>
 </body>
 </html>
 
-</html>
 
 
