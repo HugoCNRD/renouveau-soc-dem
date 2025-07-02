@@ -24,22 +24,30 @@
       font-size: 32px;
       margin: 10px 0;
     }
-    nav {
-      background-color: #6c1313;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      padding: 15px 0;
-    }
-    nav a {
-      color: #f4d3c8;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 15px;
-    }
-    nav a.active {
-      text-decoration: underline;
-    }
+nav {
+  background-color: #6c1313;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 12px 0;
+}
+
+nav a {
+  color: #f4d3c8;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 6px 12px; /* pour avoir une zone plus cliquable */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #f4d3c8;
+  color: #6c1313;
+}
+
     .section {
       padding: 50px 20px;
       max-width: 600px;
@@ -153,7 +161,7 @@
   <a href="programme.html">Programme</a>
   <a href="actualite.html">Actualités</a>
   <a href="nous.html">Qui sommes-nous ?</a>
-  <a href="adherer.html">Adhérer</a>
+  <a href="adherer.html" class="active">Adhérer</a>
 </nav>
 
 <p>
