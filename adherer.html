@@ -184,23 +184,90 @@
       font-size: 16px;
     }
 
+   form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    label {
+      font-weight: bold;
+      font-size: 16px;
+      color: #6c1313;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    input[type="number"] {
+      padding: 10px;
+      font-size: 15px;
+      border: 2px solid #6c1313;
+      border-radius: 5px;
+      font-family: 'Glacial Indifference', sans-serif;
+      resize: vertical;
+    }
+    textarea {
+      min-height: 100px;
+    }
+    button {
+      background-color: #6c1313;
+      color: #f4d3c8;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #8a1b1b;
+    }
+    .paypal-section {
+      margin-top: 30px;
+      padding: 20px;
+      border: 2px solid #6c1313;
+      border-radius: 10px;
+      background: #fff;
+      color: #1a1a1a;
+    }
+    .paypal-section label {
+      font-weight: normal;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+    .paypal-section input[type="radio"],
+    .paypal-section input[type="checkbox"] {
+      cursor: pointer;
+    }
+    .montant-libre {
+      margin-left: 25px;
+      margin-top: 10px;
+    }
+    .montant-libre input {
+      max-width: 120px;
+    }
+    .info-contact {
+      margin-top: 15px;
+      font-style: italic;
+      color: #6c1313;
+      text-align: center;
+    }
+
     @media (max-width: 700px) {
       nav {
         flex-wrap: wrap;
         gap: 15px;
       }
-
-      .hero h2 {
-        font-size: 24px;
-      }
-
       .section h3 {
         font-size: 22px;
       }
     }
   </style>
 </head>
-
 <body>
 
 <header>
