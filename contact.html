@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Renouveau Social Démocrate</title>
+  <link href="GlacialIndifference-Regular.otf" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'GlacialIndifference-Regular.otf', sans-serif;
+      background-color: #f4d3c8;
+      color: #1a1a1a;
+      padding-bottom: 60px; 
+    }
+
+    header {
+      background-color: #6c1313;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    header img {
+      width: 140px;
+    }
+
+    header h1 {
+      color: #f4d3c8;
+      font-size: 32px;
+      margin: 10px 0;
+    }
+
+   
+    .burger {
+      position: absolute;
+      top: 20px;
+      left: 25px;
+      font-size: 34px;
+      cursor: pointer;
+      color: #f4d3c8;
+      z-index: 1001;
+    }
+
+    .menu-overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      background-color: #6c1313;
+      overflow-x: hidden;
+      transition: 0.5s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu-overlay a {
+      padding: 12px;
+      font-size: 24px;
+      color: #f4d3c8;
+      text-decoration: none;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .menu-overlay a:hover {
+      background-color: #f4d3c8;
+      color: #6c1313;
+      border-radius: 8px;
+    }
+
+    .menu-overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 36px;
+      color: #f4d3c8;
+      text-decoration: none;
+    }
+
+    nav {
+      background-color: #6c1313;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: #f4d3c8;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      padding: 6px 12px; 
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #f4d3c8;
+      color: #6c1313;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      color: #6c1313;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    .hero span {
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section h3 {
+      font-size: 26px;
+      color: #6c1313;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .section span {
+      font-weight: bold;
+    }
+
+    .footer {
+      position: fixed; 
+      bottom: 0;      
+      left: 0;        
+      width: 100%;    
+      background-color: #6c1313; 
+      color: white;    
+      text-align: center;
+      padding: 15px 0; 
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.2); 
+      font-size: 16px;
+      z-index: 1000; 
+    }
+
+    .cta {
+      background-color: #6c1313;
+      color: #f4d3c8;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .cta h4 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .cta a {
+      background-color: #f4d3c8;
+      color: #6c1313;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .hero h2 {
+        font-size: 24px;
+      }
+
+      .section h3 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <!-- Icône burger à gauche -->
+  <span class="burger" onclick="openNav()">&#9776;</span>
+  <img src="RSD.jpg" alt="Logo RSD"> 
+  <h1>Renouveau Social Démocrate</h1>
+</header>
+
+
+<div id="myNav" class="menu-overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Accueil</a>
+  <a href="programme.html">Programme</a>
+  <a href="actualite.html">Actualités</a>
+  <a href="communiques.html">Communiqués</a>
+  <a href="engagements.html">Nos engagements</a>
+  <a href="nous.html">Qui sommes-nous ?</a>
+  <a href="adherer.html">Adhérer</a>
+  <a href="charte.html">Charte des adhésions</a>
+  <a href="agenda.html">Agenda</a>
+  <a href="equipe.html">Équipe</a>
+  <a href="contact.html">Contact</a>
+  <a href="transparence.html">Transparence & finances</a>
+</div>
+
+<nav>
+  <a href="index.html">Accueil</a>
+  <a href="programme.html">Programme</a>
+  <a href="actualite.html">Actualités</a>
+  <a href="nous.html" class="active">Qui sommes-nous ?</a>
+  <a href="adherer.html">Adhérer</a>
+</nav>
+
+<section class="hero">
+  <h2>Ensemble pour un meilleur avenir</h2>
+  <p><span>Le Renouveau Social Démocrate représente l'ambition d'un réel changement</span></p>
+</section>
+
+<section class="social" style="text-align: center; padding: 30px 20px; background-color: #f9e6e2; border-radius: 12px; max-width: 400px; margin: 40px auto;">
+  <h4 style="color: #6c1313; margin-bottom: 25px; font-size: 22px;">Le Renouveau Social Démocrate est présent et engagé sur les réseaux !</h4>
+  
+   <div class="social-links" style="display: flex; flex-direction: column; align-items: center; gap: 20px; font-weight: bold; font-size: 16px;">
+
+    <a href="https://twitter.com/renouveauSD" target="_blank" rel="noopener" aria-label="Twitter"
+      style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1DA1F2;">
+      <i class="fab fa-twitter" style="font-size: 24px; margin-right: 12px;"></i> Twitter (@renouveauSD)
+    </a>
+
+    <a href="https://bsky.app/profile/renouveauSD" target="_blank" rel="noopener" aria-label="Bluesky"
+      style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1da1f2;">
+      <i class="fas fa-cloud" style="font-size: 24px; margin-right: 12px;"></i> Bluesky (@renouveauSD)
+    </a>
+
+    <a href="https://instagram.com/renouveauSD" target="_blank" rel="noopener" aria-label="Instagram"
+      style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #E1306C;">
+      <i class="fab fa-instagram" style="font-size: 24px; margin-right: 12px;"></i> Instagram (@renouveauSD)
+    </a>
+
+    <a href="https://facebook.com/renouveauSD" target="_blank" rel="noopener" aria-label="Facebook"
+      style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1877F2;">
+      <i class="fab fa-facebook" style="font-size: 24px; margin-right: 12px;"></i> Facebook (/renouveauSD)
+    </a>
+
+  </div>
+
+  <p style="margin-top: 30px; font-size: 16px; color: #6c1313;">
+    Contactez directement nos différents services :
+    <ul>
+   <li>Contact général <a href="mailto:renouveau-socdem@gmail.com" style="color: #6c1313; font-weight: bold; text-decoration: underline;">
+      renouveau-socdem@gmail.com
+    </a> </li>
+   <li>Service adhésions et cotisations <a href="mailto:rsd-adhesion@gmail.com" style="color: #6c1313; font-weight: bold; text-decoration: underline;">
+      rsd-adhesion@gmail.com
+    </a> </li>
+   <li>Service presse <a href="mailto:rsd-presse@gmail.com" style="color: #6c1313; font-weight: bold; text-decoration: underline;">
+      rsd-presse@gmail.com
+    </a> </li>
+   <li>Service évenements <a href="mailto:rsd-events@gmail.com" style="color: #6c1313; font-weight: bold; text-decoration: underline;">
+      rsd-events@gmail.com
+    </a> </li>
+   <li>Service transparence et finances <a href="mailto:rsd-finances@gmail.com" style="color: #6c1313; font-weight: bold; text-decoration: underline;">
+      rsd-finances@gmail.com
+    </a> </li>
+    <li>Service milantisme <a href="mailto:rsd-militants@gmail.com" style="color: #6c1313; font-weight: bold; text-decoration: underline;">
+      rsd-militants@gmail.com
+    </a> </li>
+    <li>Jeunesse RSD <a href="mailto:rsd-jeunes@gmail.com" style="color: #6c1313; font-weight: bold; text-decoration: underline;">
+      rsd-jeunes@gmail.com
+    </a> </li>
+  </p>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2025 Renouveau Social Démocrate — Ensemble pour un meilleur avenir</p>
+</footer>
+
+
+<script>
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0";
+  }
+</script>
+
+</body>
+</html>
