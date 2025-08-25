@@ -38,7 +38,7 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   font-size: 15px;
-  padding: 6px 12px; /* pour avoir une zone plus cliquable */
+  padding: 6px 12px; 
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -156,6 +156,18 @@ nav a.active {
   <img src="RSD.jpg" alt="Logo RSD" />
   <h1>Renouveau Social Démocrate</h1>
 </header>
+    <div id="menu"></div>
+
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("menu").innerHTML = data;
+      });
+
+    function openNav() { document.getElementById("myNav").style.width = "100%"; }
+    function closeNav() { document.getElementById("myNav").style.width = "0"; }
+  </script>
 
 <nav>
   <a href="index.html">Accueil</a>
