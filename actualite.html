@@ -187,14 +187,7 @@ nav a.active {
 </head>
 
 <body>
-  <header>
-    <img src="RSD.jpg" alt="Logo RSD" />
-    <h1>Renouveau Social Démocrate</h1>
-  </header>
-
-    <div id="menu"></div>
-
-  <script>
+    <script>
     fetch("menu.html")
       .then(res => res.text())
       .then(data => {
@@ -204,6 +197,13 @@ nav a.active {
     function openNav() { document.getElementById("myNav").style.width = "100%"; }
     function closeNav() { document.getElementById("myNav").style.width = "0"; }
   </script>
+  
+  <header>
+    <img src="RSD.jpg" alt="Logo RSD" />
+    <h1>Renouveau Social Démocrate</h1>
+  </header>
+
+    <div id="menu"></div>
 
   <nav>
     <a href="index.html">Accueil</a>
