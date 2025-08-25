@@ -2,18 +2,238 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Transparence & Finances — Renouveau Social Démocrate</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <span class="burger" onclick="openNav()">&#9776;</span>
-    <img src="RSD.jpg" alt="Logo RSD"> 
-    <h1>Renouveau Social Démocrate</h1>
-  </header>
+  <title>Renouveau Social Démocrate</title>
+  <link href="GlacialIndifference-Regular.otf" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'GlacialIndifference-Regular.otf', sans-serif;
+      background-color: #f4d3c8;
+      color: #1a1a1a;
+      padding-bottom: 60px; 
+    }
 
-  <!-- Menu injection -->
+    header {
+      background-color: #6c1313;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    header img {
+      width: 140px;
+    }
+
+    header h1 {
+      color: #f4d3c8;
+      font-size: 32px;
+      margin: 10px 0;
+    }
+
+   
+    .burger {
+      position: absolute;
+      top: 20px;
+      left: 25px;
+      font-size: 34px;
+      cursor: pointer;
+      color: #f4d3c8;
+      z-index: 1001;
+    }
+
+    .menu-overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      background-color: #6c1313;
+      overflow-x: hidden;
+      transition: 0.5s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu-overlay a {
+      padding: 12px;
+      font-size: 24px;
+      color: #f4d3c8;
+      text-decoration: none;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .menu-overlay a:hover {
+      background-color: #f4d3c8;
+      color: #6c1313;
+      border-radius: 8px;
+    }
+
+    .menu-overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 36px;
+      color: #f4d3c8;
+      text-decoration: none;
+    }
+
+    nav {
+      background-color: #6c1313;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: #f4d3c8;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      padding: 6px 12px; 
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #f4d3c8;
+      color: #6c1313;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      color: #6c1313;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    .hero span {
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section h3 {
+      font-size: 26px;
+      color: #6c1313;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .section span {
+      font-weight: bold;
+    }
+
+    .footer {
+      position: fixed; 
+      bottom: 0;      
+      left: 0;        
+      width: 100%;    
+      background-color: #6c1313; 
+      color: white;    
+      text-align: center;
+      padding: 15px 0; 
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.2); 
+      font-size: 16px;
+      z-index: 1000; 
+    }
+
+    .cta {
+      background-color: #6c1313;
+      color: #f4d3c8;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .cta h4 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .cta a {
+      background-color: #f4d3c8;
+      color: #6c1313;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .hero h2 {
+        font-size: 24px;
+      }
+
+      .section h3 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <span class="burger" onclick="openNav()">&#9776;</span>
+  <img src="RSD.jpg" alt="Logo RSD"> 
+  <h1>Renouveau Social Démocrate</h1>
+</header>
+
+
+<div id="myNav" class="menu-overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Accueil</a>
+  <a href="programme.html">Programme</a>
+  <a href="actualite.html">Actualités</a>
+  <a href="communiques.html">Communiqués</a>
+  <a href="engagements.html">Nos engagements</a>
+  <a href="nous.html">Qui sommes-nous ?</a>
+  <a href="adherer.html">Adhérer</a>
+  <a href="charte.html">Charte des adhésions</a>
+  <a href="agenda.html">Agenda</a>
+  <a href="equipe.html">Équipe</a>
+  <a href="contact.html">Contact</a>
+  <a href="transparence.html">Transparence & finances</a>
+</div>
+
+<nav>
+  <a href="index.html">Accueil</a>
+  <a href="programme.html">Programme</a>
+  <a href="actualite.html">Actualités</a>
+  <a href="nous.html" class="active">Qui sommes-nous ?</a>
+  <a href="adherer.html">Adhérer</a>
+</nav>
   <div id="menu"></div>
 
   <section class="section">
