@@ -19,6 +19,7 @@
       background-color: #6c1313;
       padding: 30px;
       text-align: center;
+      position: relative;
     }
 
     header img {
@@ -31,30 +32,81 @@
       margin: 10px 0;
     }
 
-nav {
-  background-color: #6c1313;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 12px 0;
-}
+    /* --- Icône burger --- */
+    .burger {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 28px;
+      cursor: pointer;
+      color: #f4d3c8;
+      z-index: 1001;
+    }
 
-nav a {
-  color: #f4d3c8;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 15px;
-  padding: 6px 12px; 
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+    /* --- Menu plein écran --- */
+    .menu-overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      background-color: #6c1313;
+      overflow-x: hidden;
+      transition: 0.5s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-nav a:hover,
-nav a.active {
-  background-color: #f4d3c8;
-  color: #6c1313;
-}
+    .menu-overlay a {
+      padding: 12px;
+      font-size: 24px;
+      color: #f4d3c8;
+      text-decoration: none;
+      display: block;
+      transition: 0.3s;
+    }
 
+    .menu-overlay a:hover {
+      background-color: #f4d3c8;
+      color: #6c1313;
+      border-radius: 8px;
+    }
+
+    .menu-overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 36px;
+      color: #f4d3c8;
+      text-decoration: none;
+    }
+
+    nav {
+      background-color: #6c1313;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: #f4d3c8;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      padding: 6px 12px; 
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #f4d3c8;
+      color: #6c1313;
+    }
 
     .hero {
       text-align: center;
@@ -97,19 +149,19 @@ nav a.active {
       font-weight: bold;
     }
 
-.footer {
-  position: fixed; 
-  bottom: 0;      
-  left: 0;        
-  width: 100%;    
-  background-color: #6c1313; 
-  color: white;    
-  text-align: center;
-  padding: 15px 0; 
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.2); 
-  font-size: 16px;
-  z-index: 1000; 
-}
+    .footer {
+      position: fixed; 
+      bottom: 0;      
+      left: 0;        
+      width: 100%;    
+      background-color: #6c1313; 
+      color: white;    
+      text-align: center;
+      padding: 15px 0; 
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.2); 
+      font-size: 16px;
+      z-index: 1000; 
+    }
 
     .cta {
       background-color: #6c1313;
@@ -155,7 +207,26 @@ nav a.active {
 <header>
   <img src="RSD.jpg" alt="Logo RSD"> 
   <h1>Renouveau Social Démocrate</h1>
+  <!-- Icône burger -->
+  <span class="burger" onclick="openNav()">&#9776;</span>
 </header>
+
+<!-- Menu plein écran -->
+<div id="myNav" class="menu-overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Accueil</a>
+  <a href="programme.html">Programme</a>
+  <a href="actualite.html">Actualités</a>
+  <a href="communiques.html">Communiqués</a>
+  <a href="engagements.html">Nos engagements</a>
+  <a href="nous.html">Qui sommes-nous ?</a>
+  <a href="adherer.html">Adhérer</a>
+  <a href="charte.html">Charte des adhésions</a>
+  <a href="agenda.html">Agenda</a>
+  <a href="equipe.html">Équipe</a>
+  <a href="contact.html">Contact</a>
+  <a href="transparence.html">Transparence & finances</a>
+</div>
 
 <nav>
   <a href="index.html" class="active">Accueil</a>
@@ -191,6 +262,7 @@ nav a.active {
   <p><span>Rejoindre le Renouveau Social Démocrate, c’est faire le choix de la solidarité contre l’égoïsme</span>, de la coopération contre le chacun pour soi, de l’écologie populaire contre la croissance aveugle. C’est croire encore que la République sociale et laïque peut redevenir un horizon désirable pour toutes et tous.</p>
 
   <p>Il est temps d’écrire ensemble cette nouvelle page. Venez nous rencontrer, lisez notre programme, partagez vos idées, et construisons un avenir où le progrès n’est plus réservé à quelques-uns mais partagé par tous.</p>
+</section>
 
 <section class="social" style="text-align: center; padding: 30px 20px; background-color: #f9e6e2; border-radius: 12px; max-width: 400px; margin: 40px auto;">
   <h4 style="color: #6c1313; margin-bottom: 25px; font-size: 22px;">Rejoignez-nous sur les réseaux sociaux</h4>
@@ -202,34 +274,5 @@ nav a.active {
       <i class="fab fa-twitter" style="font-size: 24px; margin-right: 12px;"></i> Twitter (@renouveauSD)
     </a>
     
-    <a href="https://bsky.app/profile/renouveauSD" target="_blank" rel="noopener" aria-label="Bluesky"
-      style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1da1f2;">
-      <i class="fas fa-cloud" style="font-size: 24px; margin-right: 12px;"></i> Bluesky (@renouveauSD)
-    </a>
-    
-    <a href="https://instagram.com/renouveauSD" target="_blank" rel="noopener" aria-label="Instagram"
-      style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #E1306C;">
-      <i class="fab fa-instagram" style="font-size: 24px; margin-right: 12px;"></i> Instagram (@renouveauSD)
-    </a>
-    
-    <a href="https://facebook.com/renouveauSD" target="_blank" rel="noopener" aria-label="Facebook"
-      style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1877F2;">
-      <i class="fab fa-facebook" style="font-size: 24px; margin-right: 12px;"></i> Facebook (/renouveauSD)
-    </a>
-    
-  </div>
+    <a href="https
 
-  <p style="margin-top: 30px; font-size: 16px; color: #6c1313;">
-    Vous pouvez aussi nous contacter par email via l'adresse 
-    <a href="mailto:renouveau-socdem@gmail.com" style="color: #6c1313; font-weight: bold; text-decoration: underline;">
-      renouveau-socdem@gmail.com
-    </a>
-  </p>
-</section>
-
-<footer class="footer">
-  <p>&copy; 2025 Renouveau Social Démocrate — Ensemble pour un meilleur avenir</p>
-</footer>
-
-</body>
-</html>
