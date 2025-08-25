@@ -32,17 +32,16 @@
       margin: 10px 0;
     }
 
- 
+   
     .burger {
       position: absolute;
       top: 20px;
-      right: 25px;
-      font-size: 28px;
+      left: 25px;
+      font-size: 34px;
       cursor: pointer;
       color: #f4d3c8;
       z-index: 1001;
     }
-
 
     .menu-overlay {
       height: 100%;
@@ -205,10 +204,10 @@
 <body>
 
 <header>
+  <!-- Icône burger à gauche -->
+  <span class="burger" onclick="openNav()">&#9776;</span>
   <img src="RSD.jpg" alt="Logo RSD"> 
   <h1>Renouveau Social Démocrate</h1>
-  <!-- Icône burger -->
-  <span class="burger" onclick="openNav()">&#9776;</span>
 </header>
 
 <!-- Menu plein écran -->
@@ -303,5 +302,17 @@
   <p>&copy; 2025 Renouveau Social Démocrate — Ensemble pour un meilleur avenir</p>
 </footer>
 
+
+<script>
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0";
+  }
+</script>
+
 </body>
 </html>
+
