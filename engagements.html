@@ -156,7 +156,19 @@
   <img src="RSD.jpg" alt="Logo RSD">
   <h1>Renouveau Social Démocrate</h1>
 </header>
+  <div id="menu"></div>
 
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("menu").innerHTML = data;
+      });
+
+    function openNav() { document.getElementById("myNav").style.width = "100%"; }
+    function closeNav() { document.getElementById("myNav").style.width = "0"; }
+  </script>
+  
 <nav>
   <a href="index.html">Accueil</a>
   <a href="programme.html">Programme</a>
