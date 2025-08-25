@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Transparence & Finances — Renouveau Social Démocrate</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <span class="burger" onclick="openNav()">&#9776;</span>
+    <img src="RSD.jpg" alt="Logo RSD"> 
+    <h1>Renouveau Social Démocrate</h1>
+  </header>
+
+  <!-- Menu injection -->
+  <div id="menu"></div>
+
+  <section class="section">
+    <h3>Transparence & finances</h3>
+    <p>La confiance des citoyens repose sur une gestion claire et transparente des ressources. Voici un aperçu de nos finances :</p>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Catégorie</th>
+          <th>Détails</th>
+          <th>Montant (2024)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Adhésions</td>
+          <td>Contributions des membres</td>
+          <td>120 000 €</td>
+        </tr>
+        <tr>
+          <td>Dons</td>
+          <td>Dons de particuliers</td>
+          <td>85 000 €</td>
+        </tr>
+        <tr>
+          <td>Subventions publiques</td>
+          <td>Aides de l’État</td>
+          <td>200 000 €</td>
+        </tr>
+        <tr>
+          <td>Dépenses campagnes</td>
+          <td>Matériel, affiches, meetings</td>
+          <td>250 000 €</td>
+        </tr>
+        <tr>
+          <td>Fonctionnement</td>
+          <td>Salaires, locaux, communication</td>
+          <td>100 000 €</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><b>Chaque euro est justifié.</b> Nous publierons chaque année un rapport détaillé disponible en téléchargement.</p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Renouveau Social Démocrate — Ensemble pour un meilleur avenir</p>
+  </footer>
+
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => { document.getElementById("menu").innerHTML = data; });
+
+    function openNav() { document.getElementById("myNav").style.width = "100%"; }
+    function closeNav() { document.getElementById("myNav").style.width = "0"; }
+  </script>
+</body>
+</html>
