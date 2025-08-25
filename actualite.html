@@ -172,19 +172,6 @@
       font-weight: bold;
     }
 
-    .footer {
-      position: fixed; 
-      bottom: 0;      
-      left: 0;        
-      width: 100%;    
-      background-color: #6c1313; 
-      color: white;    
-      text-align: center;
-      padding: 15px 0; 
-      box-shadow: 0 -2px 5px rgba(0,0,0,0.2); 
-      font-size: 16px;
-      z-index: 1000; 
-    }
 
     .cta {
       background-color: #6c1313;
@@ -208,18 +195,94 @@
       font-size: 16px;
     }
 
-    @media (max-width: 700px) {
-      nav {
-        flex-wrap: wrap;
-        gap: 15px;
+.communique {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .communique h3 {
+      font-size: 22px;
+      color: #6c1313;
+      margin-bottom: 20px;
+    }
+
+    .communique img {
+      max-width: 700px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    }
+
+
+    .actualites {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .actualite-card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+      width: 280px;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .actualite-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    .actualite-card a {
+      color: #6c1313;
+      text-decoration: none;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .actualite-card a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #6c1313;
+      color: white;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 16px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 900px) {
+      .actualites {
+        flex-direction: column;
+        align-items: center;
       }
 
-      .hero h2 {
-        font-size: 24px;
-      }
-
-      .section h3 {
-        font-size: 22px;
+      .actualite-card {
+        width: 90%;
+        max-width: 400px;
       }
     }
   </style>
